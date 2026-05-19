@@ -3,7 +3,7 @@
 
 <head>
 
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 
 <meta
     name="viewport"
@@ -24,16 +24,19 @@ body {
 
     overflow-x: hidden;
 
-    font-family: "PingFang SC", sans-serif;
+    font-family:
+        "Helvetica Neue",
+        "PingFang SC",
+        sans-serif;
 
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.32),
-            rgba(255,255,255,0.32)
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.55)
         ),
 
-        url("6c94bd44aub87983b35a5d977a232164.PNG");
+        url("c5b43b83798577953b44d9cf363b9d59.jpg");
 
     background-size: cover;
 
@@ -47,11 +50,11 @@ body {
 
     width: 88%;
 
-    max-width: 1400px;
+    max-width: 1450px;
 
     margin: auto;
 
-    padding-top: 45px;
+    padding-top: 55px;
 
     padding-bottom: 120px;
 
@@ -59,19 +62,21 @@ body {
 
 }
 
-.title-image {
+.title {
 
-    width: 700px;
+    font-size: 78px;
 
-    max-width: 92%;
+    font-weight: 900;
 
-    margin-bottom: 40px;
+    color: #444;
 
-    filter:
+    letter-spacing: 4px;
 
-        drop-shadow(0 0 18px rgba(255,255,255,0.95))
+    margin-bottom: 45px;
 
-        drop-shadow(0 0 35px rgba(255,192,203,0.35));
+    text-shadow:
+
+        0 0 8px rgba(255,255,255,0.7);
 
 }
 
@@ -85,17 +90,17 @@ body {
 
     border-radius: 999px;
 
-    border: 2px solid rgba(255,255,255,0.72);
+    border: 1.5px solid rgba(255,255,255,0.7);
 
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.35);
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(8px);
 
     padding-left: 28px;
 
     font-size: 22px;
 
-    color: #777;
+    color: #555;
 
     outline: none;
 
@@ -103,13 +108,13 @@ body {
 
     box-shadow:
 
-        0 0 25px rgba(255,255,255,0.25);
+        0 0 16px rgba(255,255,255,0.18);
 
 }
 
 .search-box::placeholder {
 
-    color: rgba(120,120,120,0.7);
+    color: rgba(100,100,100,0.7);
 
 }
 
@@ -123,65 +128,59 @@ body {
 
     gap: 12px;
 
-    padding: 16px 26px;
+    padding: 15px 24px;
 
     border-radius: 999px;
 
     background: rgba(255,255,255,0.42);
 
-    color: #ff8fb6;
+    color: #666;
 
-    font-size: 24px;
+    font-size: 22px;
 
-    box-shadow:
-
-        0 0 18px rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.65);
 
 }
 
 .songs {
 
-    margin-top: 65px;
+    margin-top: 70px;
 
     display: grid;
 
     grid-template-columns:
 
-        repeat(auto-fit, minmax(180px, 1fr));
+        repeat(auto-fit, minmax(190px, 1fr));
 
-    gap: 30px 48px;
+    gap: 32px 50px;
 
 }
 
 .song {
 
-    color: #555;
+    color: #444;
 
     text-decoration: none;
 
     font-size: 24px;
 
-    transition: 0.23s;
+    transition: 0.22s;
 
     cursor: pointer;
-
-    letter-spacing: 1px;
 
     width: fit-content;
 
     position: relative;
 
+    font-weight: 600;
+
 }
 
 .song:hover {
 
-    color: #ff9dc5;
+    color: #888;
 
-    transform: scale(1.08);
-
-    text-shadow:
-
-        0 0 12px rgba(255,255,255,0.92);
+    transform: scale(1.06);
 
 }
 
@@ -191,11 +190,11 @@ body {
 
     position: absolute;
 
-    right: -26px;
+    right: -24px;
 
-    top: -2px;
+    top: -1px;
 
-    color: #ffb3d1;
+    color: #aaa;
 
 }
 
@@ -203,31 +202,27 @@ body {
 
     position: absolute;
 
-    font-size: 46px;
+    font-size: 42px;
 
-    opacity: 0.65;
+    opacity: 0.28;
 
-    color: white;
-
-    text-shadow:
-
-        0 0 14px rgba(255,255,255,0.9);
+    color: #666;
 
 }
 
 .note1 {
 
-    top: 80px;
+    top: 90px;
 
-    right: 300px;
+    right: 240px;
 
 }
 
 .note2 {
 
-    top: 200px;
+    top: 230px;
 
-    right: 90px;
+    right: 100px;
 
 }
 
@@ -235,7 +230,7 @@ body {
 
     bottom: 120px;
 
-    right: 100px;
+    right: 80px;
 
 }
 
@@ -243,31 +238,15 @@ body {
 
     bottom: 80px;
 
-    left: 90px;
+    left: 60px;
 
 }
 
 .note5 {
 
-    top: 320px;
+    top: 380px;
 
-    left: 40px;
-
-}
-
-.note6 {
-
-    bottom: 260px;
-
-    right: 40px;
-
-}
-
-.note7 {
-
-    bottom: 30px;
-
-    left: 420px;
+    left: 30px;
 
 }
 
@@ -275,63 +254,35 @@ body {
 
     position: absolute;
 
-    color: white;
+    color: #999;
 
-    opacity: 0.8;
+    opacity: 0.32;
 
-    font-size: 30px;
-
-    text-shadow:
-
-        0 0 10px rgba(255,255,255,0.9);
+    font-size: 26px;
 
 }
 
 .sparkle1 {
 
-    top: 70px;
+    top: 120px;
 
-    left: 760px;
+    left: 700px;
 
 }
 
 .sparkle2 {
 
-    top: 370px;
+    top: 420px;
 
-    right: 320px;
+    right: 360px;
 
 }
 
 .sparkle3 {
 
-    bottom: 100px;
+    bottom: 90px;
 
-    right: 220px;
-
-}
-
-.sparkle4 {
-
-    bottom: 60px;
-
-    left: 540px;
-
-}
-
-.sparkle5 {
-
-    top: 150px;
-
-    right: 600px;
-
-}
-
-.sparkle6 {
-
-    bottom: 180px;
-
-    left: 260px;
+    left: 480px;
 
 }
 
@@ -339,41 +290,13 @@ body {
 
     position: absolute;
 
-    bottom: 10px;
+    bottom: 20px;
 
     right: 40px;
 
-    font-size: 120px;
+    font-size: 110px;
 
-    opacity: 0.45;
-
-}
-
-.cassette {
-
-    position: absolute;
-
-    top: 60px;
-
-    right: 70px;
-
-    font-size: 100px;
-
-    opacity: 0.38;
-
-}
-
-.speaker {
-
-    position: absolute;
-
-    bottom: 30px;
-
-    left: 100px;
-
-    font-size: 100px;
-
-    opacity: 0.35;
+    opacity: 0.18;
 
 }
 
@@ -381,57 +304,13 @@ body {
 
     position: absolute;
 
-    bottom: 0;
+    bottom: 20px;
 
-    left: 0;
+    left: 10px;
 
-    font-size: 120px;
+    font-size: 110px;
 
-    opacity: 0.35;
-
-}
-
-.heart {
-
-    position: absolute;
-
-    color: white;
-
-    opacity: 0.7;
-
-    font-size: 28px;
-
-}
-
-.heart1 {
-
-    top: 120px;
-
-    left: 60px;
-
-}
-
-.heart2 {
-
-    bottom: 220px;
-
-    right: 100px;
-
-}
-
-.wave {
-
-    position: absolute;
-
-    width: 100%;
-
-    height: 120px;
-
-    left: 0;
-
-    bottom: 0;
-
-    opacity: 0.35;
+    opacity: 0.16;
 
 }
 
@@ -448,11 +327,11 @@ body {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.42),
-            rgba(255,255,255,0.42)
+            rgba(255,255,255,0.58),
+            rgba(255,255,255,0.58)
         ),
 
-        url("6c94bd44aub87983b35a5d977a232164.PNG");
+        url("c5b43b83798577953b44d9cf363b9d59.jpg");
 
     background-size: cover;
 
@@ -462,7 +341,7 @@ body {
 
 .back {
 
-    color: #777;
+    color: #555;
 
     margin-bottom: 35px;
 
@@ -480,13 +359,9 @@ body {
 
     max-width: 100%;
 
-    border-radius: 30px;
+    border-radius: 24px;
 
     margin-bottom: 35px;
-
-    box-shadow:
-
-        0 0 35px rgba(255,255,255,0.45);
 
 }
 
@@ -494,9 +369,11 @@ body {
 
     font-size: 52px;
 
-    color: #555;
+    color: #444;
 
     margin-bottom: 28px;
+
+    font-weight: bold;
 
 }
 
@@ -521,11 +398,11 @@ audio {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.42),
-            rgba(255,255,255,0.42)
+            rgba(255,255,255,0.58),
+            rgba(255,255,255,0.58)
         ),
 
-        url("6c94bd44aub87983b35a5d977a232164.PNG");
+        url("c5b43b83798577953b44d9cf363b9d59.jpg");
 
     background-size: cover;
 
@@ -535,9 +412,9 @@ audio {
 
 .not-found h1 {
 
-    font-size: 56px;
+    font-size: 58px;
 
-    color: #666;
+    color: #444;
 
     margin-bottom: 28px;
 
@@ -545,7 +422,7 @@ audio {
 
 .not-found p {
 
-    color: #888;
+    color: #666;
 
     line-height: 2;
 
@@ -568,35 +445,19 @@ audio {
     <div class="music-note note2">♫</div>
     <div class="music-note note3">♬</div>
     <div class="music-note note4">♩</div>
-    <div class="music-note note5">♫</div>
-    <div class="music-note note6">♪</div>
-    <div class="music-note note7">♬</div>
+    <div class="music-note note5">♪</div>
 
     <div class="sparkle sparkle1">✦</div>
     <div class="sparkle sparkle2">✧</div>
     <div class="sparkle sparkle3">✦</div>
-    <div class="sparkle sparkle4">✧</div>
-    <div class="sparkle sparkle5">✦</div>
-    <div class="sparkle sparkle6">✧</div>
 
     <div class="vinyl">💿</div>
 
-    <div class="cassette">📼</div>
-
-    <div class="speaker">🔊</div>
-
     <div class="headphone">🎧</div>
 
-    <div class="heart heart1">♡</div>
-
-    <div class="heart heart2">♡</div>
-
-    <img
-        class="title-image"
-        src="9ed12ee0157756ac198107745b9dd3ab.jpg"
-    />
-
-    <br>
+    <div class="title">
+        笨笨的の歌单
+    </div>
 
     <input
 
@@ -612,7 +473,7 @@ audio {
 
     <div class="tip">
 
-        🎼 点击歌名可以试听哟 ♡
+        ♫ 点击歌名可以试听哟
 
     </div>
 
@@ -643,7 +504,7 @@ audio {
 
         id="songImage"
 
-        src="6c94bd44aub87983b35a5d977a232164.PNG"
+        src="c5b43b83798577953b44d9cf363b9d59.jpg"
 
     >
 
