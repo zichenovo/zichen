@@ -8,7 +8,7 @@
 <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
->
+/>
 
 <title>笨笨的の歌单</title>
 
@@ -29,8 +29,8 @@ body {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.35),
-            rgba(255,255,255,0.35)
+            rgba(255,255,255,0.32),
+            rgba(255,255,255,0.32)
         ),
 
         url("6c94bd44aub87983b35a5d977a232164.PNG");
@@ -47,11 +47,11 @@ body {
 
     width: 88%;
 
-    max-width: 1280px;
+    max-width: 1400px;
 
     margin: auto;
 
-    padding-top: 65px;
+    padding-top: 45px;
 
     padding-bottom: 120px;
 
@@ -59,27 +59,19 @@ body {
 
 }
 
-.title {
+.title-image {
 
-    font-size: 82px;
+    width: 700px;
 
-    font-weight: bold;
+    max-width: 92%;
 
-    line-height: 1;
+    margin-bottom: 40px;
 
-    margin-bottom: 48px;
+    filter:
 
-    letter-spacing: 2px;
+        drop-shadow(0 0 18px rgba(255,255,255,0.95))
 
-    color: #fff;
-
-    text-shadow:
-
-        0 0 10px rgba(255,255,255,0.95),
-
-        0 0 30px rgba(255,192,203,0.45),
-
-        0 0 45px rgba(167,199,255,0.38);
+        drop-shadow(0 0 35px rgba(255,192,203,0.35));
 
 }
 
@@ -87,23 +79,23 @@ body {
 
     width: 100%;
 
-    max-width: 720px;
+    max-width: 760px;
 
-    height: 60px;
+    height: 68px;
 
-    border-radius: 25px;
+    border-radius: 999px;
 
-    border: 1px solid rgba(255,255,255,0.65);
+    border: 2px solid rgba(255,255,255,0.72);
 
-    background: rgba(255,255,255,0.28);
+    background: rgba(255,255,255,0.25);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
 
-    padding-left: 24px;
+    padding-left: 28px;
 
-    font-size: 18px;
+    font-size: 22px;
 
-    color: #666;
+    color: #777;
 
     outline: none;
 
@@ -111,41 +103,45 @@ body {
 
     box-shadow:
 
-        0 0 25px rgba(255,255,255,0.22);
+        0 0 25px rgba(255,255,255,0.25);
 
 }
 
 .search-box::placeholder {
 
-    color: rgba(120,120,120,0.72);
+    color: rgba(120,120,120,0.7);
 
 }
 
 .tip {
 
-    margin-top: 18px;
+    margin-top: 22px;
 
-    display: inline-block;
+    display: inline-flex;
 
-    padding: 12px 22px;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 26px;
 
     border-radius: 999px;
 
-    background: rgba(255,255,255,0.45);
+    background: rgba(255,255,255,0.42);
 
     color: #ff8fb6;
 
-    font-size: 20px;
+    font-size: 24px;
 
     box-shadow:
 
-        0 0 20px rgba(255,255,255,0.4);
+        0 0 18px rgba(255,255,255,0.35);
 
 }
 
 .songs {
 
-    margin-top: 60px;
+    margin-top: 65px;
 
     display: grid;
 
@@ -153,7 +149,7 @@ body {
 
         repeat(auto-fit, minmax(180px, 1fr));
 
-    gap: 28px 42px;
+    gap: 30px 48px;
 
 }
 
@@ -163,7 +159,7 @@ body {
 
     text-decoration: none;
 
-    font-size: 22px;
+    font-size: 24px;
 
     transition: 0.23s;
 
@@ -172,6 +168,8 @@ body {
     letter-spacing: 1px;
 
     width: fit-content;
+
+    position: relative;
 
 }
 
@@ -187,35 +185,49 @@ body {
 
 }
 
+.song:hover::after {
+
+    content: "♪";
+
+    position: absolute;
+
+    right: -26px;
+
+    top: -2px;
+
+    color: #ffb3d1;
+
+}
+
 .music-note {
 
     position: absolute;
 
-    font-size: 42px;
+    font-size: 46px;
 
-    opacity: 0.6;
+    opacity: 0.65;
 
     color: white;
 
     text-shadow:
 
-        0 0 15px rgba(255,255,255,0.9);
+        0 0 14px rgba(255,255,255,0.9);
 
 }
 
 .note1 {
 
-    top: 40px;
+    top: 80px;
 
-    right: 240px;
+    right: 300px;
 
 }
 
 .note2 {
 
-    top: 140px;
+    top: 200px;
 
-    right: 110px;
+    right: 90px;
 
 }
 
@@ -223,51 +235,145 @@ body {
 
     bottom: 120px;
 
-    right: 90px;
+    right: 100px;
 
 }
 
 .note4 {
 
-    bottom: 70px;
+    bottom: 80px;
 
-    left: 70px;
+    left: 90px;
 
 }
 
-.star {
+.note5 {
+
+    top: 320px;
+
+    left: 40px;
+
+}
+
+.note6 {
+
+    bottom: 260px;
+
+    right: 40px;
+
+}
+
+.note7 {
+
+    bottom: 30px;
+
+    left: 420px;
+
+}
+
+.sparkle {
 
     position: absolute;
 
     color: white;
 
-    opacity: 0.75;
+    opacity: 0.8;
 
-    font-size: 28px;
+    font-size: 30px;
 
-}
+    text-shadow:
 
-.star1 {
-
-    top: 110px;
-
-    left: 600px;
+        0 0 10px rgba(255,255,255,0.9);
 
 }
 
-.star2 {
+.sparkle1 {
 
-    top: 340px;
+    top: 70px;
 
-    right: 300px;
+    left: 760px;
 
 }
 
-.star3 {
+.sparkle2 {
 
-    bottom: 80px;
+    top: 370px;
+
+    right: 320px;
+
+}
+
+.sparkle3 {
+
+    bottom: 100px;
+
+    right: 220px;
+
+}
+
+.sparkle4 {
+
+    bottom: 60px;
 
     left: 540px;
+
+}
+
+.sparkle5 {
+
+    top: 150px;
+
+    right: 600px;
+
+}
+
+.sparkle6 {
+
+    bottom: 180px;
+
+    left: 260px;
+
+}
+
+.vinyl {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 40px;
+
+    font-size: 120px;
+
+    opacity: 0.45;
+
+}
+
+.cassette {
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 70px;
+
+    font-size: 100px;
+
+    opacity: 0.38;
+
+}
+
+.speaker {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 100px;
+
+    font-size: 100px;
+
+    opacity: 0.35;
 
 }
 
@@ -275,27 +381,57 @@ body {
 
     position: absolute;
 
-    bottom: 10px;
+    bottom: 0;
 
-    left: 20px;
+    left: 0;
 
-    font-size: 90px;
+    font-size: 120px;
 
-    opacity: 0.55;
+    opacity: 0.35;
 
 }
 
-.record {
+.heart {
 
     position: absolute;
 
-    bottom: 10px;
+    color: white;
 
-    right: 30px;
+    opacity: 0.7;
 
-    font-size: 95px;
+    font-size: 28px;
 
-    opacity: 0.55;
+}
+
+.heart1 {
+
+    top: 120px;
+
+    left: 60px;
+
+}
+
+.heart2 {
+
+    bottom: 220px;
+
+    right: 100px;
+
+}
+
+.wave {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 120px;
+
+    left: 0;
+
+    bottom: 0;
+
+    opacity: 0.35;
 
 }
 
@@ -334,13 +470,13 @@ body {
 
     cursor: pointer;
 
-    font-size: 17px;
+    font-size: 20px;
 
 }
 
 .cover {
 
-    width: 360px;
+    width: 420px;
 
     max-width: 100%;
 
@@ -348,11 +484,15 @@ body {
 
     margin-bottom: 35px;
 
+    box-shadow:
+
+        0 0 35px rgba(255,255,255,0.45);
+
 }
 
 .song-title {
 
-    font-size: 44px;
+    font-size: 52px;
 
     color: #555;
 
@@ -362,7 +502,7 @@ body {
 
 audio {
 
-    width: 380px;
+    width: 420px;
 
     max-width: 100%;
 
@@ -395,7 +535,7 @@ audio {
 
 .not-found h1 {
 
-    font-size: 52px;
+    font-size: 56px;
 
     color: #666;
 
@@ -409,7 +549,7 @@ audio {
 
     line-height: 2;
 
-    font-size: 22px;
+    font-size: 24px;
 
 }
 
@@ -428,18 +568,35 @@ audio {
     <div class="music-note note2">♫</div>
     <div class="music-note note3">♬</div>
     <div class="music-note note4">♩</div>
+    <div class="music-note note5">♫</div>
+    <div class="music-note note6">♪</div>
+    <div class="music-note note7">♬</div>
 
-    <div class="star star1">✦</div>
-    <div class="star star2">✧</div>
-    <div class="star star3">✦</div>
+    <div class="sparkle sparkle1">✦</div>
+    <div class="sparkle sparkle2">✧</div>
+    <div class="sparkle sparkle3">✦</div>
+    <div class="sparkle sparkle4">✧</div>
+    <div class="sparkle sparkle5">✦</div>
+    <div class="sparkle sparkle6">✧</div>
+
+    <div class="vinyl">💿</div>
+
+    <div class="cassette">📼</div>
+
+    <div class="speaker">🔊</div>
 
     <div class="headphone">🎧</div>
 
-    <div class="record">📀</div>
+    <div class="heart heart1">♡</div>
 
-    <div class="title">
-        笨笨的の歌单
-    </div>
+    <div class="heart heart2">♡</div>
+
+    <img
+        class="title-image"
+        src="9ed12ee0157756ac198107745b9dd3ab.jpg"
+    />
+
+    <br>
 
     <input
 
@@ -451,8 +608,12 @@ audio {
 
     >
 
+    <br>
+
     <div class="tip">
-        点击歌名可以试听哟 ♡
+
+        🎼 点击歌名可以试听哟 ♡
+
     </div>
 
     <div
