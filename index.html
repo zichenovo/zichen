@@ -2,183 +2,392 @@
 <html lang="zh">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>笨笨的の歌单</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
         body {
+
             margin: 0;
+
             padding: 0;
-            background: #0f1117;
-            color: #d7dce5;
-            font-family: "PingFang SC", sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.72),
+                    rgba(245,245,245,0.88)
+                ),
+
+                url('https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1200');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
             overflow-x: hidden;
+
+            font-family: "PingFang SC", sans-serif;
+
+            color: #555;
+
+        }
+
+        .overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            backdrop-filter: blur(2px);
+
+            z-index: 0;
+
         }
 
         .container {
-            width: 88%;
-            max-width: 500px;
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 78%;
+
+            max-width: 390px;
+
             margin: auto;
-            padding-top: 40px;
-            padding-bottom: 100px;
+
+            padding-top: 75px;
+
+            padding-bottom: 130px;
+
         }
 
         .title {
-            font-size: 28px;
-            margin-bottom: 28px;
+
+            font-family: 'Fredoka', sans-serif;
+
+            font-size: 50px;
+
+            line-height: 1.1;
+
+            color: rgba(255,255,255,0.86);
+
+            text-shadow:
+                0 0 10px rgba(255,255,255,0.9),
+
+                0 0 20px rgba(255,255,255,0.4);
+
+            margin-bottom: 38px;
+
             letter-spacing: 1px;
-            color: #e8edf5;
+
         }
 
         .search-box {
+
             width: 100%;
-            height: 48px;
-            border-radius: 14px;
-            border: 1px solid #3c4557;
-            background: #161b24;
-            color: white;
-            padding-left: 16px;
-            font-size: 15px;
-            outline: none;
+
+            height: 50px;
+
+            border: 1px solid rgba(255,255,255,0.5);
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,0.32);
+
+            backdrop-filter: blur(10px);
+
             box-sizing: border-box;
+
+            padding-left: 18px;
+
+            color: #666;
+
+            font-size: 15px;
+
+            outline: none;
+
+            box-shadow:
+                0 0 20px rgba(255,255,255,0.15);
+
         }
 
         .search-box::placeholder {
-            color: #7e8798;
-        }
 
-        .hint {
-            margin-top: 10px;
-            margin-bottom: 38px;
-            color: #6f7888;
-            font-size: 13px;
+            color: rgba(120,120,120,0.72);
+
         }
 
         .songs {
+
+            margin-top: 48px;
+
             display: flex;
+
             flex-wrap: wrap;
-            gap: 12px 16px;
+
+            gap: 22px 28px;
+
+            line-height: 2.3;
+
         }
 
         .song {
-            color: #c8d2e4;
+
+            color: #4f4f4f;
+
             text-decoration: none;
-            font-size: 15px;
+
+            font-size: 17px;
+
             transition: 0.25s;
+
             cursor: pointer;
-            line-height: 1.8;
+
+            letter-spacing: 1px;
+
         }
 
         .song:hover {
-            color: #8eb8ff;
-            text-shadow: 0 0 10px rgba(142,184,255,0.6);
+
+            color: #8f95aa;
+
+            text-shadow:
+                0 0 10px rgba(255,255,255,0.9);
+
         }
 
         .song-page {
+
             display: none;
+
             min-height: 100vh;
-            background: #0f1117;
-            color: white;
-            padding: 30px;
+
+            padding: 38px 28px;
+
             box-sizing: border-box;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.74),
+                    rgba(245,245,245,0.88)
+                ),
+
+                url('https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1200');
+
+            background-size: cover;
+
+            background-position: center;
+
         }
 
         .back {
-            color: #8ea7d8;
-            margin-bottom: 30px;
+
+            color: #8c90a1;
+
+            margin-bottom: 32px;
+
             display: inline-block;
+
             cursor: pointer;
+
+            font-size: 15px;
+
         }
 
         .cover {
+
             width: 100%;
-            border-radius: 18px;
-            margin-bottom: 28px;
-            opacity: 0.9;
+
+            border-radius: 26px;
+
+            margin-bottom: 34px;
+
+            opacity: 0.93;
+
+            box-shadow:
+                0 0 30px rgba(255,255,255,0.35);
+
         }
 
         .song-title {
-            font-size: 30px;
-            margin-bottom: 24px;
+
+            font-size: 34px;
+
+            color: #4d4d4d;
+
+            margin-bottom: 28px;
+
         }
 
         audio {
+
             width: 100%;
-            margin-top: 10px;
+
+            opacity: 0.78;
+
         }
 
         .not-found {
+
             display: none;
+
             min-height: 100vh;
-            background: #0f1117;
-            color: #d8dde7;
-            padding: 40px 28px;
+
+            padding: 80px 34px;
+
             box-sizing: border-box;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.74),
+                    rgba(245,245,245,0.88)
+                ),
+
+                url('https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1200');
+
+            background-size: cover;
+
+            background-position: center;
+
         }
 
         .not-found h1 {
-            font-size: 24px;
-            margin-bottom: 24px;
+
+            font-size: 34px;
+
             font-weight: normal;
+
+            color: #575757;
+
+            margin-bottom: 28px;
+
         }
 
         .not-found p {
-            color: #8992a5;
-            line-height: 1.9;
+
+            color: #8a8a8a;
+
+            line-height: 2;
+
+            font-size: 16px;
+
         }
 
     </style>
+
 </head>
 
 <body>
 
-    <div class="container" id="homePage">
+    <div class="overlay"></div>
+
+    <div
+        class="container"
+        id="homePage"
+    >
 
         <div class="title">
             笨笨的の歌单
         </div>
 
         <input
+
             class="search-box"
+
             id="searchInput"
-            placeholder="搜索歌名..."
+
+            placeholder="试试搜索"
+
         >
 
-        <div class="hint">
-            试试搜索
-        </div>
-
-        <div class="songs" id="songList"></div>
+        <div
+            class="songs"
+            id="songList"
+        ></div>
 
     </div>
 
-    <div class="song-page" id="songPage">
+    <div
+        class="song-page"
+        id="songPage"
+    >
 
-        <div class="back" onclick="goHome()">
+        <div
+            class="back"
+            onclick="goHome()"
+        >
+
             ← 返回歌单
+
         </div>
 
         <img
+
             class="cover"
+
             id="songImage"
-            src="https://picsum.photos/500/500?blur=2"
+
+            src="https://picsum.photos/500/500?grayscale"
+
         >
 
-        <div class="song-title" id="songTitle"></div>
+        <div
+            class="song-title"
+            id="songTitle"
+        ></div>
 
         <audio controls>
-            <source src="" type="audio/mpeg">
+
+            <source
+                src=""
+                type="audio/mpeg"
+            >
+
         </audio>
 
     </div>
 
-    <div class="not-found" id="notFoundPage">
+    <div
+        class="not-found"
+        id="notFoundPage"
+    >
 
-        <div class="back" onclick="goHome()">
+        <div
+            class="back"
+            onclick="goHome()"
+        >
+
             ← 返回
+
         </div>
 
         <h1>
@@ -186,8 +395,11 @@
         </h1>
 
         <p>
+
             笨笨的还不会这首歌<br>
+
             可以加入待学歌单哟
+
         </p>
 
     </div>
@@ -264,7 +476,9 @@
 
                         openSong(value);
 
-                    } else {
+                    }
+
+                    else {
 
                         document.getElementById("homePage").style.display = "none";
 
