@@ -20,11 +20,9 @@ rel="stylesheet"
 <style>
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
 }
 
 body{
@@ -48,6 +46,8 @@ display:flex;
 justify-content:center;
 
 }
+
+/* 主卡片 */
 
 .container{
 
@@ -110,7 +110,7 @@ box-shadow:0 3px 10px rgba(0,0,0,0.05);
 
 }
 
-/* 搜索 */
+/* 搜索框 */
 
 .search-box{
 
@@ -146,7 +146,7 @@ color:#aaa19a;
 
 }
 
-/* 音符 */
+/* 音乐元素 */
 
 .note{
 
@@ -187,6 +187,8 @@ gap:14px;
 
 }
 
+/* 单个歌名 */
+
 .song{
 
 display:block;
@@ -218,7 +220,7 @@ background:white;
 
 }
 
-/* 手机 */
+/* 手机适配 */
 
 @media(max-width:768px){
 
@@ -263,114 +265,63 @@ margin-bottom:20px;
 <input
 id="searchInput"
 placeholder="试试搜索"
->
+/>
 
 </div>
 
 <div class="song-grid">
 
 <a class="song" href="song.html?song=末日">末日</a>
-
 <a class="song" href="song.html?song=走马">走马</a>
-
 <a class="song" href="song.html?song=天赋">天赋</a>
-
 <a class="song" href="song.html?song=空空">空空</a>
-
 <a class="song" href="song.html?song=半壶纱">半壶纱</a>
-
 <a class="song" href="song.html?song=要爱我">要爱我</a>
-
 <a class="song" href="song.html?song=失眠了">失眠了</a>
-
 <a class="song" href="song.html?song=小公主">小公主</a>
-
 <a class="song" href="song.html?song=after17">after17</a>
-
 <a class="song" href="song.html?song=野火一季">野火一季</a>
-
 <a class="song" href="song.html?song=心愿便利贴">心愿便利贴</a>
-
 <a class="song" href="song.html?song=梁山伯与朱丽叶">梁山伯与朱丽叶</a>
-
 <a class="song" href="song.html?song=AlwaysOnline">AlwaysOnline</a>
-
 <a class="song" href="song.html?song=你的crush降临了吗">你的crush降临了吗</a>
-
 <a class="song" href="song.html?song=绿色">绿色</a>
-
 <a class="song" href="song.html?song=爱我你就抱抱我">爱我你就抱抱我</a>
-
 <a class="song" href="song.html?song=那时雨">那时雨</a>
-
 <a class="song" href="song.html?song=东京不太热">东京不太热</a>
-
 <a class="song" href="song.html?song=一滴泪的时间">一滴泪的时间</a>
-
 <a class="song" href="song.html?song=夏天的风">夏天的风</a>
-
 <a class="song" href="song.html?song=怪我咯">怪我咯</a>
-
 <a class="song" href="song.html?song=虚拟">虚拟</a>
-
 <a class="song" href="song.html?song=宠坏">宠坏</a>
-
 <a class="song" href="song.html?song=不要忘记我爱你">不要忘记我爱你</a>
-
 <a class="song" href="song.html?song=树的花语">树的花语</a>
-
 <a class="song" href="song.html?song=奇妙能力歌">奇妙能力歌</a>
-
 <a class="song" href="song.html?song=左手右手">左手右手</a>
-
 <a class="song" href="song.html?song=天龙八部之宿敌">天龙八部之宿敌</a>
-
 <a class="song" href="song.html?song=南泥湾">南泥湾</a>
-
 <a class="song" href="song.html?song=越来越不懂">越来越不懂</a>
-
 <a class="song" href="song.html?song=公主殿下">公主殿下</a>
-
 <a class="song" href="song.html?song=宝贝">宝贝</a>
-
 <a class="song" href="song.html?song=有雨有雨">有雨有雨</a>
-
 <a class="song" href="song.html?song=粉雾海">粉雾海</a>
-
 <a class="song" href="song.html?song=宠爱">宠爱</a>
-
 <a class="song" href="song.html?song=红昭愿">红昭愿</a>
-
 <a class="song" href="song.html?song=等">等</a>
-
 <a class="song" href="song.html?song=Doll">Doll</a>
-
 <a class="song" href="song.html?song=日不落">日不落</a>
-
 <a class="song" href="song.html?song=怎么了">怎么了</a>
-
 <a class="song" href="song.html?song=我们">我们</a>
-
 <a class="song" href="song.html?song=红色高跟鞋">红色高跟鞋</a>
-
 <a class="song" href="song.html?song=关键词">关键词</a>
-
 <a class="song" href="song.html?song=怪物">怪物</a>
-
 <a class="song" href="song.html?song=第57次取消发送">第57次取消发送</a>
-
 <a class="song" href="song.html?song=凑热闹">凑热闹</a>
-
 <a class="song" href="song.html?song=嗯哼">嗯哼</a>
-
 <a class="song" href="song.html?song=不怕">不怕</a>
-
 <a class="song" href="song.html?song=如果爱忘了">如果爱忘了</a>
-
 <a class="song" href="song.html?song=摆">摆</a>
-
 <a class="song" href="song.html?song=几分之几">几分之几</a>
-
 <a class="song" href="song.html?song=take me hand">take me hand</a>
 
 </div>
@@ -379,6 +330,28 @@ placeholder="试试搜索"
 
 <script>
 
+const songs = [
+
+"末日","走马","天赋","空空","半壶纱","要爱我","失眠了","小公主",
+
+"after17","野火一季","心愿便利贴","梁山伯与朱丽叶","AlwaysOnline",
+
+"你的crush降临了吗","绿色","爱我你就抱抱我","那时雨","东京不太热",
+
+"一滴泪的时间","夏天的风","怪我咯","虚拟","宠坏","不要忘记我爱你",
+
+"树的花语","奇妙能力歌","左手右手","天龙八部之宿敌","南泥湾",
+
+"越来越不懂","公主殿下","宝贝","有雨有雨","粉雾海","宠爱",
+
+"红昭愿","等","Doll","日不落","怎么了","我们","红色高跟鞋",
+
+"关键词","怪物","第57次取消发送","凑热闹","嗯哼","不怕",
+
+"如果爱忘了","摆","几分之几","take me hand"
+
+];
+
 const input =
 document.getElementById("searchInput");
 
@@ -386,13 +359,22 @@ input.addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-const value = input.value.trim();
+const value =
+input.value.trim();
 
-if(value){
+if(!value) return;
+
+if(songs.includes(value)){
 
 window.location.href =
 "song.html?song=" +
 encodeURIComponent(value);
+
+}else{
+
+alert(
+"不好意思 笨笨的还没学会这首歌～\n已加入待学歌单♡"
+);
 
 }
 
