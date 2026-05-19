@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>歌曲详情</title>
+
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"PingFang SC",sans-serif;
+
+    background:
+    radial-gradient(circle at top left,#f4ece7 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#e6e0db 0%,transparent 30%),
+    linear-gradient(135deg,#f5f2ef,#ece7e2,#f4f1ee);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+.card{
+
+    width:100%;
+    max-width:1200px;
+
+    background:rgba(255,255,255,0.45);
+
+    border-radius:40px;
+
+    padding:36px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+    position:relative;
+}
+
+.back{
+
+    text-decoration:none;
+
+    color:#665c55;
+
+    font-size:20px;
+
+    display:inline-block;
+
+    margin-bottom:24px;
+}
+
+.song-title{
+
+    font-family:'ZCOOL KuaiLe',cursive;
+
+    font-size:58px;
+
+    color:#706660;
+
+    margin-bottom:28px;
+}
+
+.content{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+/* 左边图片 */
+
+.left-image{
+
+    width:420px;
+    height:420px;
+
+    border-radius:28px;
+
+    object-fit:cover;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 右边 */
+
+.right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:28px;
+}
+
+/* 唱片 */
+
+.record{
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    animation:spin 10s linear infinite;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* 音频 */
+
+audio{
+
+    width:360px;
+
+    border-radius:999px;
+}
+
+/* 手机 */
+
+@media(max-width:768px){
+
+    .song-title{
+        font-size:42px;
+    }
+
+    .left-image{
+
+        width:100%;
+        height:auto;
+    }
+
+    .record{
+
+        width:260px;
+        height:260px;
+    }
+
+    audio{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<a class="back" href="index.html">
+← 返回歌单
+</a>
+
+<h1 class="song-title" id="songTitle"></h1>
+
+<div class="content">
+
+<img
+class="left-image"
+src="1b2c6149d84adfc08a08f05816b9221.jpg"
+>
+
+<div class="right">
+
+<img
+class="record"
+src="a05dabee4a8dc4d1e3f12c4acc7652b0.jpg"
+>
+
+<audio controls>
+
+<source src="" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const song =
+params.get("song");
+
+document.getElementById("songTitle").innerText = song;
+
+</script>
+
+</body>
+</html>
