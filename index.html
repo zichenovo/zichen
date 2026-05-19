@@ -3,473 +3,622 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>笨笨的の歌单</title>
+<title>笨笨的の歌单</title>
 
-    <style>
+<style>
 
-        body {
+body {
 
-            margin: 0;
+    margin: 0;
 
-            padding: 0;
+    padding: 0;
 
-            min-height: 100vh;
+    min-height: 100vh;
 
-            overflow-x: hidden;
+    overflow-x: hidden;
 
-            font-family: "PingFang SC", sans-serif;
+    font-family: "PingFang SC", sans-serif;
 
-            background-image:
+    background-image:
 
-                linear-gradient(
-                    rgba(255,255,255,0.38),
-                    rgba(255,255,255,0.38)
-                ),
+        linear-gradient(
+            rgba(255,255,255,0.35),
+            rgba(255,255,255,0.35)
+        ),
 
-                url("6c94bd44aub87983b35a5d977a232164.PNG");
+        url("6c94bd44aub87983b35a5d977a232164.PNG");
 
-            background-size: cover;
+    background-size: cover;
 
-            background-position: center;
+    background-position: center;
 
-            background-attachment: fixed;
+    background-attachment: fixed;
 
-        }
+}
 
-        .container {
+.container {
 
-            width: 88%;
+    width: 88%;
 
-            max-width: 1280px;
+    max-width: 1280px;
 
-            margin: auto;
+    margin: auto;
 
-            padding-top: 70px;
+    padding-top: 65px;
 
-            padding-bottom: 120px;
+    padding-bottom: 120px;
 
-        }
+    position: relative;
 
-        .title {
+}
 
-            font-size: 78px;
+.title {
 
-            font-weight: bold;
+    font-size: 82px;
 
-            line-height: 1;
+    font-weight: bold;
 
-            margin-bottom: 48px;
+    line-height: 1;
 
-            letter-spacing: 2px;
+    margin-bottom: 48px;
 
-            color: #fff;
+    letter-spacing: 2px;
 
-            text-shadow:
+    color: #fff;
 
-                0 0 10px rgba(255,255,255,0.95),
+    text-shadow:
 
-                0 0 30px rgba(255,192,203,0.45),
+        0 0 10px rgba(255,255,255,0.95),
 
-                0 0 45px rgba(167,199,255,0.38);
+        0 0 30px rgba(255,192,203,0.45),
 
-        }
+        0 0 45px rgba(167,199,255,0.38);
 
-        .search-box {
+}
 
-            width: 100%;
+.search-box {
 
-            max-width: 720px;
+    width: 100%;
 
-            height: 60px;
+    max-width: 720px;
 
-            border-radius: 25px;
+    height: 60px;
 
-            border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 25px;
 
-            background: rgba(255,255,255,0.28);
+    border: 1px solid rgba(255,255,255,0.65);
 
-            backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.28);
 
-            padding-left: 24px;
+    backdrop-filter: blur(12px);
 
-            font-size: 18px;
+    padding-left: 24px;
 
-            color: #666;
+    font-size: 18px;
 
-            outline: none;
+    color: #666;
 
-            box-sizing: border-box;
+    outline: none;
 
-            box-shadow:
+    box-sizing: border-box;
 
-                0 0 25px rgba(255,255,255,0.22);
+    box-shadow:
 
-        }
+        0 0 25px rgba(255,255,255,0.22);
 
-        .search-box::placeholder {
+}
 
-            color: rgba(120,120,120,0.72);
+.search-box::placeholder {
 
-        }
+    color: rgba(120,120,120,0.72);
 
-        .songs {
+}
 
-            margin-top: 65px;
+.tip {
 
-            display: grid;
+    margin-top: 18px;
 
-            grid-template-columns:
+    display: inline-block;
 
-                repeat(auto-fit, minmax(180px, 1fr));
+    padding: 12px 22px;
 
-            gap: 28px 42px;
+    border-radius: 999px;
 
-        }
+    background: rgba(255,255,255,0.45);
 
-        .song {
+    color: #ff8fb6;
 
-            color: #555;
+    font-size: 20px;
 
-            text-decoration: none;
+    box-shadow:
 
-            font-size: 22px;
+        0 0 20px rgba(255,255,255,0.4);
 
-            transition: 0.23s;
+}
 
-            cursor: pointer;
+.songs {
 
-            letter-spacing: 1px;
+    margin-top: 60px;
 
-            width: fit-content;
+    display: grid;
 
-        }
+    grid-template-columns:
 
-        .song:hover {
+        repeat(auto-fit, minmax(180px, 1fr));
 
-            color: #ff9dc5;
+    gap: 28px 42px;
 
-            transform: scale(1.08);
+}
 
-            text-shadow:
+.song {
 
-                0 0 12px rgba(255,255,255,0.92);
+    color: #555;
 
-        }
+    text-decoration: none;
 
-        .song-page {
+    font-size: 22px;
 
-            display: none;
+    transition: 0.23s;
 
-            min-height: 100vh;
+    cursor: pointer;
 
-            padding: 70px;
+    letter-spacing: 1px;
 
-            box-sizing: border-box;
+    width: fit-content;
 
-            background-image:
+}
 
-                linear-gradient(
-                    rgba(255,255,255,0.42),
-                    rgba(255,255,255,0.42)
-                ),
+.song:hover {
 
-                url("6c94bd44aub87983b35a5d977a232164.PNG");
+    color: #ff9dc5;
 
-            background-size: cover;
+    transform: scale(1.08);
 
-            background-position: center;
+    text-shadow:
 
-        }
+        0 0 12px rgba(255,255,255,0.92);
 
-        .back {
+}
 
-            color: #777;
+.music-note {
 
-            margin-bottom: 35px;
+    position: absolute;
 
-            display: inline-block;
+    font-size: 42px;
 
-            cursor: pointer;
+    opacity: 0.6;
 
-            font-size: 17px;
+    color: white;
 
-        }
+    text-shadow:
 
-        .cover {
+        0 0 15px rgba(255,255,255,0.9);
 
-            width: 360px;
+}
 
-            max-width: 100%;
+.note1 {
 
-            border-radius: 30px;
+    top: 40px;
 
-            margin-bottom: 35px;
+    right: 240px;
 
-            box-shadow:
+}
 
-                0 0 35px rgba(255,255,255,0.45);
+.note2 {
 
-        }
+    top: 140px;
 
-        .song-title {
+    right: 110px;
 
-            font-size: 44px;
+}
 
-            color: #555;
+.note3 {
 
-            margin-bottom: 28px;
+    bottom: 120px;
 
-        }
+    right: 90px;
 
-        audio {
+}
 
-            width: 380px;
+.note4 {
 
-            max-width: 100%;
+    bottom: 70px;
 
-        }
+    left: 70px;
 
-        .not-found {
+}
 
-            display: none;
+.star {
 
-            min-height: 100vh;
+    position: absolute;
 
-            padding: 80px;
+    color: white;
 
-            box-sizing: border-box;
+    opacity: 0.75;
 
-            background-image:
+    font-size: 28px;
 
-                linear-gradient(
-                    rgba(255,255,255,0.42),
-                    rgba(255,255,255,0.42)
-                ),
+}
 
-                url("6c94bd44aub87983b35a5d977a232164.PNG");
+.star1 {
 
-            background-size: cover;
+    top: 110px;
 
-            background-position: center;
+    left: 600px;
 
-        }
+}
 
-        .not-found h1 {
+.star2 {
 
-            font-size: 52px;
+    top: 340px;
 
-            color: #666;
+    right: 300px;
 
-            margin-bottom: 28px;
+}
 
-        }
+.star3 {
 
-        .not-found p {
+    bottom: 80px;
 
-            color: #888;
+    left: 540px;
 
-            line-height: 2;
+}
 
-            font-size: 22px;
+.headphone {
 
-        }
+    position: absolute;
 
-    </style>
+    bottom: 10px;
+
+    left: 20px;
+
+    font-size: 90px;
+
+    opacity: 0.55;
+
+}
+
+.record {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 30px;
+
+    font-size: 95px;
+
+    opacity: 0.55;
+
+}
+
+.song-page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 70px;
+
+    box-sizing: border-box;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.42),
+            rgba(255,255,255,0.42)
+        ),
+
+        url("6c94bd44aub87983b35a5d977a232164.PNG");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.back {
+
+    color: #777;
+
+    margin-bottom: 35px;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+.cover {
+
+    width: 360px;
+
+    max-width: 100%;
+
+    border-radius: 30px;
+
+    margin-bottom: 35px;
+
+}
+
+.song-title {
+
+    font-size: 44px;
+
+    color: #555;
+
+    margin-bottom: 28px;
+
+}
+
+audio {
+
+    width: 380px;
+
+    max-width: 100%;
+
+}
+
+.not-found {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 80px;
+
+    box-sizing: border-box;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.42),
+            rgba(255,255,255,0.42)
+        ),
+
+        url("6c94bd44aub87983b35a5d977a232164.PNG");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.not-found h1 {
+
+    font-size: 52px;
+
+    color: #666;
+
+    margin-bottom: 28px;
+
+}
+
+.not-found p {
+
+    color: #888;
+
+    line-height: 2;
+
+    font-size: 22px;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <div
-        class="container"
-        id="homePage"
+<div
+    class="container"
+    id="homePage"
+>
+
+    <div class="music-note note1">♪</div>
+    <div class="music-note note2">♫</div>
+    <div class="music-note note3">♬</div>
+    <div class="music-note note4">♩</div>
+
+    <div class="star star1">✦</div>
+    <div class="star star2">✧</div>
+    <div class="star star3">✦</div>
+
+    <div class="headphone">🎧</div>
+
+    <div class="record">📀</div>
+
+    <div class="title">
+        笨笨的の歌单
+    </div>
+
+    <input
+
+        class="search-box"
+
+        id="searchInput"
+
+        placeholder="试试搜索"
+
     >
 
-        <div class="title">
-            笨笨的の歌单
-        </div>
-
-        <input
-
-            class="search-box"
-
-            id="searchInput"
-
-            placeholder="试试搜索"
-
-        >
-
-        <div
-            class="songs"
-            id="songList"
-        ></div>
-
+    <div class="tip">
+        点击歌名可以试听哟 ♡
     </div>
 
     <div
-        class="song-page"
-        id="songPage"
-    >
+        class="songs"
+        id="songList"
+    ></div>
 
-        <div
-            class="back"
-            onclick="goHome()"
-        >
+</div>
 
-            ← 返回歌单
-
-        </div>
-
-        <img
-
-            class="cover"
-
-            id="songImage"
-
-            src="6c94bd44aub87983b35a5d977a232164.PNG"
-
-        >
-
-        <div
-            class="song-title"
-            id="songTitle"
-        ></div>
-
-        <audio controls>
-
-            <source
-                src=""
-                type="audio/mpeg"
-            >
-
-        </audio>
-
-    </div>
+<div
+    class="song-page"
+    id="songPage"
+>
 
     <div
-        class="not-found"
-        id="notFoundPage"
+        class="back"
+        onclick="goHome()"
     >
 
-        <div
-            class="back"
-            onclick="goHome()"
-        >
-
-            ← 返回
-
-        </div>
-
-        <h1>
-            不好意思
-        </h1>
-
-        <p>
-
-            笨笨的还不会这首歌<br>
-
-            可以加入待学歌单哟
-
-        </p>
+        ← 返回歌单
 
     </div>
 
-    <script>
+    <img
 
-        const songs = [
+        class="cover"
 
-            "流浪","温室","伏线","雪藏","背叛","收藏","雨天","揉光",
-            "就让","散场","情结","恶作剧","慢慢的","说什么","贪吃蛇",
-            "忘与记","复乐园","从此以后","假装快乐","何必不舍",
-            "会呼吸的痛","夏日倒计时","一直很安静","最初的记忆",
-            "抹不掉的你","想念拟人化","十二月的奇迹",
-            "你就是我的风景","在加纳共和国离婚","你","瞬","坠","换",
-            "于是","绽放","遐想","忘记","彻夜","白板","小微光","小胡同",
-            "遗忘周","平行线","失落盛行","人群中的信","不见不离开",
-            "NUNA3.0","你已把我的心磨平","想要成为的大人","有些",
-            "慢慢","晚安","只你","篡改","嗜好","你想要的","孤单心事",
-            "假装没变过","我只能离开","夏夜最后的烟火","我想","和你",
-            "情话","再一起","九月底","天黑座","天气未报","日落沙滩后",
-            "不对等天体","最好的都给你","触碰不到的你"
+        id="songImage"
 
-        ];
+        src="6c94bd44aub87983b35a5d977a232164.PNG"
 
-        const songList = document.getElementById("songList");
+    >
 
-        songs.sort((a,b) => a.length - b.length);
+    <div
+        class="song-title"
+        id="songTitle"
+    ></div>
 
-        songs.forEach(song => {
+    <audio controls>
 
-            const item = document.createElement("a");
+        <source
+            src=""
+            type="audio/mpeg"
+        >
 
-            item.className = "song";
+    </audio>
 
-            item.innerText = song;
+</div>
 
-            item.onclick = () => openSong(song);
+<div
+    class="not-found"
+    id="notFoundPage"
+>
 
-            songList.appendChild(item);
+    <div
+        class="back"
+        onclick="goHome()"
+    >
 
-        });
+        ← 返回
 
-        function openSong(song) {
+    </div>
 
-            document.getElementById("homePage").style.display = "none";
+    <h1>
+        不好意思
+    </h1>
 
-            document.getElementById("notFoundPage").style.display = "none";
+    <p>
 
-            document.getElementById("songPage").style.display = "block";
+        笨笨的还不会这首歌<br>
 
-            document.getElementById("songTitle").innerText = song;
+        可以加入待学歌单哟
+
+    </p>
+
+</div>
+
+<script>
+
+const songs = [
+
+    "流浪","温室","伏线","雪藏","背叛","收藏","雨天","揉光",
+    "就让","散场","情结","恶作剧","慢慢的","说什么","贪吃蛇",
+    "忘与记","复乐园","从此以后","假装快乐","何必不舍",
+    "会呼吸的痛","夏日倒计时","一直很安静","最初的记忆",
+    "抹不掉的你","想念拟人化","十二月的奇迹",
+    "你就是我的风景","在加纳共和国离婚","你","瞬","坠","换",
+    "于是","绽放","遐想","忘记","彻夜","白板","小微光","小胡同",
+    "遗忘周","平行线","失落盛行","人群中的信","不见不离开",
+    "NUNA3.0","你已把我的心磨平","想要成为的大人","有些",
+    "慢慢","晚安","只你","篡改","嗜好","你想要的","孤单心事",
+    "假装没变过","我只能离开","夏夜最后的烟火","我想","和你",
+    "情话","再一起","九月底","天黑座","天气未报","日落沙滩后",
+    "不对等天体","最好的都给你","触碰不到的你"
+
+];
+
+const songList = document.getElementById("songList");
+
+songs.sort((a,b) => a.length - b.length);
+
+songs.forEach(song => {
+
+    const item = document.createElement("a");
+
+    item.className = "song";
+
+    item.innerText = song;
+
+    item.onclick = () => openSong(song);
+
+    songList.appendChild(item);
+
+});
+
+function openSong(song) {
+
+    document.getElementById("homePage").style.display = "none";
+
+    document.getElementById("notFoundPage").style.display = "none";
+
+    document.getElementById("songPage").style.display = "block";
+
+    document.getElementById("songTitle").innerText = song;
+
+}
+
+function goHome() {
+
+    document.getElementById("homePage").style.display = "block";
+
+    document.getElementById("songPage").style.display = "none";
+
+    document.getElementById("notFoundPage").style.display = "none";
+
+}
+
+document
+    .getElementById("searchInput")
+    .addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+
+            const value = this.value.trim();
+
+            if (songs.includes(value)) {
+
+                openSong(value);
+
+            }
+
+            else {
+
+                document.getElementById("homePage").style.display = "none";
+
+                document.getElementById("songPage").style.display = "none";
+
+                document.getElementById("notFoundPage").style.display = "block";
+
+            }
 
         }
 
-        function goHome() {
+    });
 
-            document.getElementById("homePage").style.display = "block";
-
-            document.getElementById("songPage").style.display = "none";
-
-            document.getElementById("notFoundPage").style.display = "none";
-
-        }
-
-        document
-            .getElementById("searchInput")
-            .addEventListener("keypress", function(event) {
-
-                if (event.key === "Enter") {
-
-                    const value = this.value.trim();
-
-                    if (songs.includes(value)) {
-
-                        openSong(value);
-
-                    }
-
-                    else {
-
-                        document.getElementById("homePage").style.display = "none";
-
-                        document.getElementById("songPage").style.display = "none";
-
-                        document.getElementById("notFoundPage").style.display = "block";
-
-                    }
-
-                }
-
-            });
-
-    </script>
+</script>
 
 </body>
 
