@@ -36,8 +36,8 @@ sans-serif;
 background:
 
 linear-gradient(
-rgba(255,255,255,0.58),
-rgba(255,255,255,0.58)
+rgba(255,255,255,0.56),
+rgba(255,255,255,0.56)
 ),
 
 url("c5b43b83798577953b44d9cf363b9d59.jpg");
@@ -55,12 +55,12 @@ overflow-x:hidden;
 .container{
 
 width:92%;
-max-width:1700px;
+max-width:700px;
 
 margin:auto;
 
 padding-top:45px;
-padding-bottom:70px;
+padding-bottom:90px;
 
 position:relative;
 
@@ -70,40 +70,60 @@ position:relative;
 
 font-family:'Baloo 2', cursive;
 
-font-size:88px;
+font-size:62px;
 
 font-weight:800;
 
-letter-spacing:3px;
+line-height:1.05;
 
-line-height:1;
+color:#5a5a5a;
 
-margin-bottom:38px;
+margin-bottom:32px;
 
-color:#575757;
+letter-spacing:2px;
 
 text-shadow:
 
-0 0 14px rgba(255,255,255,0.8);
+0 0 14px rgba(255,255,255,0.75);
+
+}
+
+.top-tip{
+
+position:absolute;
+
+top:48px;
+right:0;
+
+font-size:15px;
+
+color:#777;
+
+background:rgba(255,255,255,0.34);
+
+padding:10px 18px;
+
+border-radius:999px;
+
+backdrop-filter:blur(8px);
 
 }
 
 .search{
 
 width:100%;
-max-width:820px;
 
-height:72px;
+height:62px;
 
 border:none;
 
 border-radius:999px;
 
-padding-left:30px;
+padding-left:24px;
 
-font-size:24px;
+font-size:21px;
 
-background:rgba(255,255,255,0.42);
+background:rgba(255,255,255,0.38);
 
 backdrop-filter:blur(10px);
 
@@ -113,7 +133,9 @@ outline:none;
 
 box-shadow:
 
-0 0 25px rgba(255,255,255,0.2);
+0 0 22px rgba(255,255,255,0.18);
+
+margin-bottom:42px;
 
 }
 
@@ -123,89 +145,66 @@ color:#8a8a8a;
 
 }
 
-.top-tip{
-
-position:absolute;
-
-top:58px;
-right:10px;
-
-font-size:20px;
-
-color:#777;
-
-background:rgba(255,255,255,0.35);
-
-padding:12px 22px;
-
-border-radius:999px;
-
-backdrop-filter:blur(8px);
-
-}
-
 .music{
 
 position:absolute;
 
-font-size:48px;
+font-size:34px;
 
-opacity:0.18;
+opacity:0.17;
 
-color:#555;
+color:#666;
+
+pointer-events:none;
 
 }
 
 .m1{
 
 top:120px;
-right:330px;
+right:40px;
 
 }
 
 .m2{
 
-top:300px;
-right:100px;
+top:320px;
+left:-10px;
 
 }
 
 .m3{
 
-bottom:130px;
-left:70px;
+bottom:120px;
+right:10px;
 
 }
 
 .m4{
 
-bottom:60px;
-right:60px;
+bottom:40px;
+left:10px;
 
 }
 
 .song-grid{
 
-margin-top:55px;
-
 display:grid;
 
 grid-template-columns:
-repeat(7, 1fr);
+repeat(3, 1fr);
 
-column-gap:30px;
-
-row-gap:18px;
+gap:18px 22px;
 
 }
 
 .song{
 
-font-size:30px;
+font-size:24px;
 
 font-weight:600;
 
-color:#444;
+color:#4f4f4f;
 
 cursor:pointer;
 
@@ -215,11 +214,13 @@ width:fit-content;
 
 position:relative;
 
+line-height:1.45;
+
 }
 
 .song:hover{
 
-transform:scale(1.08);
+transform:scale(1.07);
 
 color:#8d8d8d;
 
@@ -231,10 +232,10 @@ content:"♪";
 
 position:absolute;
 
-right:-24px;
+right:-18px;
 top:-2px;
 
-font-size:18px;
+font-size:15px;
 
 color:#999;
 
@@ -244,15 +245,15 @@ color:#999;
 
 display:none;
 
-padding:70px;
-
 min-height:100vh;
+
+padding:50px 28px;
 
 background:
 
 linear-gradient(
-rgba(255,255,255,0.6),
-rgba(255,255,255,0.6)
+rgba(255,255,255,0.56),
+rgba(255,255,255,0.56)
 ),
 
 url("c5b43b83798577953b44d9cf363b9d59.jpg");
@@ -264,46 +265,43 @@ background-position:center;
 
 .back{
 
-font-size:22px;
+font-size:18px;
 
 color:#666;
 
-cursor:pointer;
-
-margin-bottom:40px;
+margin-bottom:34px;
 
 display:inline-block;
+
+cursor:pointer;
 
 }
 
 .song-title{
 
-font-size:58px;
+font-size:46px;
 
 font-weight:bold;
 
 color:#555;
 
-margin-bottom:30px;
+margin-bottom:28px;
 
 }
 
 .cover{
 
-width:420px;
-
-max-width:100%;
+width:100%;
 
 border-radius:26px;
 
-margin-bottom:35px;
+margin-bottom:30px;
 
 }
 
 audio{
 
-width:420px;
-max-width:100%;
+width:100%;
 
 }
 
@@ -311,15 +309,15 @@ max-width:100%;
 
 display:none;
 
-padding:90px;
-
 min-height:100vh;
+
+padding:60px 28px;
 
 background:
 
 linear-gradient(
-rgba(255,255,255,0.6),
-rgba(255,255,255,0.6)
+rgba(255,255,255,0.56),
+rgba(255,255,255,0.56)
 ),
 
 url("c5b43b83798577953b44d9cf363b9d59.jpg");
@@ -331,19 +329,19 @@ background-position:center;
 
 .not-found h1{
 
-font-size:60px;
+font-size:48px;
 
 color:#555;
 
-margin-bottom:26px;
+margin-bottom:22px;
 
 }
 
 .not-found p{
 
-font-size:26px;
+font-size:22px;
 
-line-height:2;
+line-height:1.9;
 
 color:#777;
 
@@ -462,19 +460,41 @@ onclick="goHome()"
 
 const songs = [
 
-"流浪","温室","伏线","雪藏","背叛","收藏","雨天","揉光",
-"就让","散场","情结","恶作剧","慢慢的","说什么","贪吃蛇",
-"忘与记","复乐园","从此以后","假装快乐","何必不舍",
-"会呼吸的痛","夏日倒计时","一直很安静","最初的记忆",
-"抹不掉的你","想念拟人化","十二月的奇迹",
-"你就是我的风景","在加纳共和国离婚","你","瞬","坠","换",
-"于是","绽放","遐想","忘记","彻夜","白板","小微光","小胡同",
-"遗忘周","平行线","失落盛行","人群中的信","不见不离开",
-"NUNA3.0","你已把我的心磨平","想要成为的大人","有些",
-"慢慢","晚安","只你","篡改","嗜好","你想要的","孤单心事",
-"假装没变过","我只能离开","夏夜最后的烟火","我想","和你",
-"情话","再一起","九月底","天黑座","天气未报","日落沙滩后",
-"不对等天体","最好的都给你","触碰不到的你"
+"等","摆","嗯哼",
+
+"末日","走马","天赋","空空","宠爱","Doll","怪物",
+
+"绿色","虚拟","宠坏","宝贝","失眠了","小公主",
+
+"半壶纱","要爱我","那时雨","红昭愿","关键词",
+
+"after17","粉雾海","南泥湾","凑热闹",
+
+"东京不太热","越来越不懂","夏天的风",
+
+"左手右手","奇妙能力歌","心愿便利贴",
+
+"AlwaysOnline","第57次取消发送",
+
+"你的crush降临了吗",
+
+"如果爱忘了","几分之几","take me hand",
+
+"不怕","有雨有雨","怎么了","我们",
+
+"日不落","怪我咯","怪物",
+
+"爱我你就抱抱我",
+
+"树的花语","公主殿下",
+
+"梁山伯与朱丽叶",
+
+"不要忘记我爱你",
+
+"天龙八部之宿敌",
+
+"红色高跟鞋"
 
 ];
 
