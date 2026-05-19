@@ -1,9 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>笨笨的の歌单</title>
 
@@ -18,111 +18,92 @@
 }
 
 body{
+
     font-family:"PingFang SC",sans-serif;
-    min-height:100vh;
+
     background:
     radial-gradient(circle at top left,#f4ece7 0%,transparent 35%),
     radial-gradient(circle at bottom right,#e6e0db 0%,transparent 30%),
     linear-gradient(135deg,#f5f2ef,#ece7e2,#f4f1ee);
 
-    color:#6d625b;
+    min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     padding:28px 12px;
 }
 
-/* 主卡片 */
-
 .container{
+
     width:100%;
-    max-width:920px;
+    max-width:980px;
 
-    background:rgba(255,255,255,0.38);
-
-    backdrop-filter:blur(8px);
+    background:rgba(255,255,255,0.45);
 
     border-radius:42px;
 
-    padding:36px 24px 50px;
+    padding:36px 26px 50px;
 
-    box-shadow:
-    0 8px 30px rgba(120,100,90,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
 
     position:relative;
 
     overflow:hidden;
-}
 
-/* 音符 */
-
-.music-note{
-    position:absolute;
-    font-size:48px;
-    opacity:0.08;
-}
-
-.note1{
-    left:20px;
-    top:120px;
-}
-
-.note2{
-    right:30px;
-    top:130px;
-}
-
-.note3{
-    right:40px;
-    bottom:360px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
 }
 
 /* 标题 */
 
 .title{
+
     font-family:'ZCOOL KuaiLe',cursive;
-    font-size:72px;
-    line-height:1.05;
-    color:#6f655f;
+
+    font-size:74px;
+
+    color:#706660;
 
     margin-bottom:28px;
-
-    letter-spacing:2px;
-
-    text-shadow:
-    0 2px 0 rgba(255,255,255,0.7),
-    0 6px 18px rgba(120,110,100,0.12);
 }
 
-/* 试听提示 */
+/* 右上角 */
 
-.listen-tip{
+.tip{
+
     position:absolute;
-    top:34px;
-    right:34px;
 
-    background:rgba(255,255,255,0.72);
+    top:36px;
+    right:36px;
 
-    padding:12px 18px;
+    background:white;
+
+    padding:12px 20px;
 
     border-radius:999px;
 
     font-size:14px;
 
-    color:#7b7068;
+    color:#7c7068;
 
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
 
 /* 搜索 */
 
 .search-box{
+
     width:100%;
-    margin-bottom:28px;
+
+    margin-bottom:26px;
 }
 
 .search-box input{
+
     width:100%;
+
     padding:18px 24px;
 
     border:none;
@@ -134,16 +115,32 @@ body{
     font-size:18px;
 
     outline:none;
-
-    color:#6b615b;
-
-    box-shadow:
-    inset 0 1px 4px rgba(0,0,0,0.03),
-    0 3px 10px rgba(0,0,0,0.03);
 }
 
-.search-box input::placeholder{
-    color:#aaa19a;
+/* 音符 */
+
+.note{
+
+    position:absolute;
+
+    opacity:0.08;
+
+    font-size:70px;
+}
+
+.note1{
+    left:20px;
+    top:180px;
+}
+
+.note2{
+    right:30px;
+    top:190px;
+}
+
+.note3{
+    right:50px;
+    bottom:250px;
 }
 
 /* 歌单 */
@@ -155,128 +152,34 @@ body{
     grid-template-columns:repeat(4,1fr);
 
     gap:14px;
-
-    margin-top:10px;
 }
 
 .song{
 
-    background:rgba(255,255,255,0.58);
-
     border:none;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    padding:14px 14px;
+    padding:16px;
+
+    background:rgba(255,255,255,0.6);
 
     text-align:left;
 
     font-size:18px;
 
-    color:#5d5550;
+    color:#625953;
 
     cursor:pointer;
 
     transition:0.25s;
-
-    box-shadow:
-    0 3px 10px rgba(0,0,0,0.03);
 }
 
 .song:hover{
+
     transform:translateY(-2px);
+
     background:white;
-}
-
-/* 底部播放器 */
-
-.player-section{
-
-    margin-top:44px;
-
-    background:rgba(255,255,255,0.52);
-
-    border-radius:36px;
-
-    padding:26px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:22px;
-}
-
-.back{
-    font-size:18px;
-    color:#6c625c;
-}
-
-.player-content{
-
-    display:flex;
-
-    gap:26px;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-}
-
-/* 左边图 */
-
-.cover-image{
-
-    width:320px;
-    height:420px;
-
-    object-fit:cover;
-
-    border-radius:26px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
-
-/* 右边 */
-
-.right-side{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:22px;
-}
-
-/* 唱片 */
-
-.record{
-
-    width:260px;
-    height:260px;
-
-    border-radius:50%;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
-}
-
-.record img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* audio */
-
-audio{
-    width:100%;
-    max-width:380px;
 }
 
 /* 手机 */
@@ -291,24 +194,10 @@ audio{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .player-content{
-        flex-direction:column;
-    }
-
-    .cover-image{
-        width:100%;
-        height:auto;
-    }
-
-    .record{
-        width:220px;
-        height:220px;
-    }
-
-    .listen-tip{
+    .tip{
         position:static;
         width:max-content;
-        margin-bottom:18px;
+        margin-bottom:20px;
     }
 }
 
@@ -319,11 +208,11 @@ audio{
 
 <div class="container">
 
-<div class="music-note note1">♫</div>
-<div class="music-note note2">♪</div>
-<div class="music-note note3">♬</div>
+<div class="note note1">♫</div>
+<div class="note note2">♪</div>
+<div class="note note3">♬</div>
 
-<div class="listen-tip">
+<div class="tip">
 ♫ 点击歌名试听
 </div>
 
@@ -334,35 +223,6 @@ audio{
 </div>
 
 <div class="song-grid" id="songGrid"></div>
-
-<!-- 播放器 -->
-
-<div class="player-section">
-
-<div class="back">← 返回歌单</div>
-
-<div class="player-content">
-
-<img
-class="cover-image"
-src="1b2c6149d84adfc08a08f05816b9221.jpg"
->
-
-<div class="right-side">
-
-<div class="record">
-<img src="a05dabee4a8dc4d1e3f12c4acc7652b0.jpg">
-</div>
-
-<audio controls>
-<source src="">
-</audio>
-
-</div>
-
-</div>
-
-</div>
 
 </div>
 
@@ -387,35 +247,37 @@ const grid = document.getElementById("songGrid");
 
 songs.forEach(song=>{
 
-    const btn=document.createElement("button");
+    const button = document.createElement("button");
 
-    btn.className="song";
+    button.className = "song";
 
-    btn.innerText=song;
+    button.innerText = song;
 
-    btn.onclick=()=>{
+    button.onclick = ()=>{
 
-        alert("现在播放：" + song + "（之后你可以换成真实音频）");
+        window.location.href =
+        "song.html?song=" + encodeURIComponent(song);
 
     };
 
-    grid.appendChild(btn);
+    grid.appendChild(button);
 
 });
 
 /* 搜索 */
 
-const searchInput=document.getElementById("searchInput");
+const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("keypress",function(e){
 
     if(e.key==="Enter"){
 
-        const value=searchInput.value.trim();
+        const value = searchInput.value.trim();
 
         if(songs.includes(value)){
 
-            alert("找到歌曲：" + value);
+            window.location.href =
+            "song.html?song=" + encodeURIComponent(value);
 
         }else{
 
